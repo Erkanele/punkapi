@@ -2,9 +2,9 @@ class SearchController < ApplicationController
   
   def index 
     filter_by = params[:filter_by]
-
+    # Endpoint
     url = 'https://api.punkapi.com/v2/beers?per_page=80'
-
+    # Query
     query = {
       beer_name: params[:name],
       abv: params[:abv],
@@ -12,12 +12,13 @@ class SearchController < ApplicationController
       food_pairing: params[:food]
     }
     
-    # Send the GET request and get the response
+    # Send the GET request to endpoint
     response = HTTParty.get(url, query)
     if response.success?
       puts "Connection is up and running"
       # Parse the response body as JSON
-      # Determine value of @so
+      # Use ternary operator to assign filter from endpoint request,
+      # No filter if none added, otherwise use filter that entered in search box
       @some_beers = filter_by.nil? ? 
       response.parsed_response : 
       response.parsed_response.filter{|beer|beer["name"].downcase.include? filter_by}
@@ -36,9 +37,10 @@ class SearchController < ApplicationController
         Rails.logger.error "Error: #{response.code} - #{response.message}"
         end
     end
-    console
   end
-
+# Redirect user to / if empty value
+# otherwise downcase input and assign it to parameter variable
+# and redirect to index action with filter_by query of parameter
   def search
     if params[:q].blank?
       redirect_to "/" and return

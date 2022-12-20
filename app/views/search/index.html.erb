@@ -4,11 +4,14 @@
   <%= submit_tag "Search", name: nil %>
 <% end %>
 
-<% @beers.each do |beer| %>
-  <h2><%= beer["name"] %></h2>
-  <p><%= beer["abv"] %>% ABV</p>
-  <p><%= beer["description"] %></p>
-  <p>Food pairing: <%= beer["food_pairing"].join(", ") %></p>
-<% end %>
-
 <%= paginate @beers %>
+<% if @beers.empty? %>
+  <p>No beers were found, try again.</p>
+<% else %>
+  <% @beers.each do |beer| %>
+    <h2><%= beer["name"] %></h2>
+    <p><%= beer["abv"] %>% ABV</p>
+    <p><%= beer["description"] %></p>
+    <p><b>Food matching:</b> <%= beer["food_pairing"].join(", ") %></p>
+  <% end %>
+<% end %>
