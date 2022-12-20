@@ -1,5 +1,5 @@
 class SearchController < ApplicationController
-  # Fetch Endpoint
+  # Endpoint
   BEER_URL = 'https://api.punkapi.com/v2/beers?per_page=80'
 
   def index 
