@@ -30,11 +30,11 @@ information about that beer.
 
 ### 3. Run test with Rspec
 Run individual tests:
-$ ./spec/requests/beer_spec.rb
-$ ./spec/controllers/search_controller_spec.rb
-  Or
-  Run both with:
-  $ rspec rspec
+- $ ./spec/requests/beer_spec.rb
+- $ ./spec/controllers/search_controller_spec.rb
+- Or
+-  Run both with:
+-  $ rspec rspec
 
 ## Gems used:
 - [HTTParty](https://github.com/jnunemaker/httparty)
