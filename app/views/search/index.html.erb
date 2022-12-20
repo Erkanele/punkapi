@@ -1,0 +1,14 @@
+<%= form_tag search_path, method: :get do %>
+  <%= label_tag :q, "Search for a beer:" %>
+  <%= text_field_tag :q, params[:q] %>
+  <%= submit_tag "Search", name: nil %>
+<% end %>
+
+<% @beers.each do |beer| %>
+  <h2><%= beer["name"] %></h2>
+  <p><%= beer["abv"] %>% ABV</p>
+  <p><%= beer["description"] %></p>
+  <p>Food pairing: <%= beer["food_pairing"].join(", ") %></p>
+<% end %>
+
+<%= paginate @beers %>
