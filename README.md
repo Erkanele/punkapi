@@ -6,7 +6,7 @@
 - Search function to search for desired beer.
 - Filtered searched beer by name.
 - Paginated list of the search result with 10 items per view.
-- Implemented some test coverage with Gem rspec to check connection and parameters
+- Implemented some test coverage with Gem rspec to check connection, parameters and if service is down.
 
 ## Pre-requisites:
 - Ruby (v3.1.3)
