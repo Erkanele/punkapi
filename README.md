@@ -29,7 +29,3 @@ information about that beer.
 ## Gems used:
 - [HTTParty](https://github.com/jnunemaker/httparty)
 - [kaminari](https://github.com/kaminari/kaminari)
-
-## TODO
-- Update search function for empty responses
-- Update documentation in files
