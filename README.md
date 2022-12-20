@@ -41,3 +41,9 @@ Run individual tests:
 - [kaminari](https://github.com/kaminari/kaminari)
 - [rspec](https://github.com/rspec/rspec-rails)
 
+
+## Todo
+- Implement more search functionallity
+- Make some prettier design
+- Add more tests 
+
