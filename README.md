@@ -40,3 +40,4 @@ $ ./spec/controllers/search_controller_spec.rb
 - [HTTParty](https://github.com/jnunemaker/httparty)
 - [kaminari](https://github.com/kaminari/kaminari)
 - [rspec](https://github.com/rspec/rspec-rails)
+
